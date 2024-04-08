@@ -1,0 +1,25 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+homeassistant:
+  packages: !include_dir_named integrations
+  
+# Load frontend themes from the themes folder
+frontend:
+  extra_module_url:
+  - /hacsfiles/button-card/button-card.js
+  - /hacsfiles/light-entity-card/light-entity-card.js
+  - /hacsfiles/lovelace-auto-entities/auto-entities.js
+  - /hacsfiles/lovelace-card-mod/card-mod.js
+  - /hacsfiles/lovelace-layout-card/layout-card.js
+  - /hacsfiles/lovelace-mushroom/mushroom.js
+  - /hacsfiles/lovelace-state-switch/state-switch.js
+  - /hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js
+  - /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
+  - /hacsfiles/mini-media-player/mini-media-player-bundle.js
+  - /hacsfiles/mushroom-strategy/mushroom-strategy.js
+  - /hacsfiles/my-cards/my-slider.js
+  - /hacsfiles/simple-weather-card/simple-weather-card-bundle.js
+  - /hacsfiles/weather-radar-card/weather-radar-card.js
+  themes: !include_dir_merge_named /config/themes
