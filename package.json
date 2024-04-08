@@ -1,18 +1,18 @@
 {
-  "name": "home-assistant",
+  "name": "home-assistant-data",
   "description": "Configuration files for my Home-Assistant instance.",
   "license": "MIT",
   "author": {
     "name": "Donghyeon Hwang",
     "email": "chalk@chalk-is.me",
-    "url": "https://pascaliske.dev"
+    "url": "https://chalk-ho.me"
   },
   "repository": {
-    "url": "https://github.com/pascaliske/home-assistant.git",
+    "url": "https://github.com/chalk-hwang/home-assistant-data.git",
     "type": "git"
   },
   "bugs": {
-    "url": "https://github.com/pascaliske/home-assistant/issues"
+    "url": "https://github.com/chalk-hwang/home-assistant-data/issues"
   },
   "private": true,
   "scripts": {
