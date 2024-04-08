@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 tasks:
   # list modified files
@@ -13,7 +13,7 @@ tasks:
     cmds:
       - task: disable:secrets
       - task: disable:integrations
-      - task: disable:automations
+      # - task: disable:automations
 
   # replace secret references
   disable:secrets:
@@ -32,15 +32,15 @@ tasks:
       - test -f config/integrations/homekit.yaml.disabled
       - test -f config/integrations/http.yaml.disabled
 
-  disable:automations:
-    desc: Disable all automations containing a reference to a blueprint.
-    cmds:
-      - mv config/automations/battery-check.yaml{,.disabled}
-      - mv config/automations/bedroom-mini-switch.yaml{,.disabled}
-      - mv config/automations/love-mini-switch.yaml{,.disabled}
-      - mv config/automations/office-mini-switch.yaml{,.disabled}
-    status:
-      - test -f config/automations/battery-check.yaml.disabled
-      - test -f config/automations/bedroom-mini-switch.yaml.disabled
-      - test -f config/automations/love-mini-switch.yaml.disabled
-      - test -f config/automations/office-mini-switch.yaml.disabled
+  # disable:automations:
+  #   desc: Disable all automations containing a reference to a blueprint.
+  #   cmds:
+  #     - mv config/automations/battery-check.yaml{,.disabled}
+  #     - mv config/automations/bedroom-mini-switch.yaml{,.disabled}
+  #     - mv config/automations/love-mini-switch.yaml{,.disabled}
+  #     - mv config/automations/office-mini-switch.yaml{,.disabled}
+  #   status:
+  #     - test -f config/automations/battery-check.yaml.disabled
+  #     - test -f config/automations/bedroom-mini-switch.yaml.disabled
+  #     - test -f config/automations/love-mini-switch.yaml.disabled
+  #     - test -f config/automations/office-mini-switch.yaml.disabled
