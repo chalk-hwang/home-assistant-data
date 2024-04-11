@@ -1,16 +1,4 @@
-# general settings
-homeassistant:
-  name: Home
-  country: KR
-  language: ko
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-  elevation: !secret home_elevation
-  unit_system: metric
-  currency: KRW
-  time_zone: Asia/Seoul
-  external_url: !secret external_url
-  internal_url: !secret internal_url
+
 
 # enables configuration ui
 config:
