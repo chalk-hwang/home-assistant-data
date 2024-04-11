@@ -1,9 +1,7 @@
-
-# Loads default set of integrations. Do not remove.
-default_config:
-
 homeassistant:
   packages: !include_dir_named integrations
+  auth_providers:
+  - type: homeassistant
 
 # Load frontend themes from the themes folder
 frontend:
