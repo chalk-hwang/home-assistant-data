@@ -1,0 +1,129 @@
+homeassistant: true
+advanced:
+  channel: 11
+  network_key: !secret z2m_advanced_network_key
+
+  pan_id: 10527
+  ext_pan_id:
+    - 222
+    - 137
+    - 156
+    - 168
+    - 132
+    - 157
+    - 242
+    - 118
+  homeassistant_legacy_entity_attributes: false
+  legacy_api: false
+  legacy_availability_payload: false
+  log_level: info
+  log_syslog:
+    app_name: Zigbee2MQTT
+    eol: /n
+    host: localhost
+    localhost: localhost
+    path: /dev/log
+    pid: process.pid
+    port: 514
+    protocol: udp4
+    type: '5424'
+  last_seen: ISO_8601
+mqtt:
+  server: mqtt://a0d7b954-emqx:1883
+  user: zigbee2mqtt
+  password: !secret z2m_mqtt_password
+  keepalive: 60
+  reject_unauthorized: true
+  version: 5
+frontend:
+  port: 8099
+serial:
+  port: /dev/ttyACM0
+  adapter: ember
+  rtscts: false
+  baudrate: 115200
+device_options:
+  legacy: false
+devices:
+  '0x54ef44100054ad17':
+    friendly_name: Mini Bathroom Wall Switch
+    state_action: true
+  '0x54ef4410004b97db':
+    friendly_name: Donghyeon Room Wall Switch
+    state_action: true
+  '0x54ef44100054b880':
+    friendly_name: Kitchen Wall Switch
+    state_action: true
+  '0x54ef44100007cafe':
+    friendly_name: Donghyeon Room Cabinet Door Sensor
+  '0x54ef44100049d48e':
+    friendly_name: Donghyeon Room Door Sensor
+  '0x00158d0009002906':
+    friendly_name: Living Room Wall Switch
+    state_action: true
+  '0x00124b0023ad4457':
+    friendly_name: '0x00124b0023ad4457'
+  '0xa4c1387ea009dea7':
+    friendly_name: '0xa4c1387ea009dea7'
+  '0x54ef441000313344':
+    friendly_name: Mini Bathroom Motion Sensor
+  '0x54ef4410004b10ad':
+    friendly_name: Mini Bathroom Temperature and Humidity Sensor
+  '0x54ef4410004bbb59':
+    friendly_name: Bathroom Wall Switch
+    state_action: true
+  '0x54ef44100054ad9d':
+    friendly_name: Dressing Room Wall Switch
+    state_action: true
+  '0x286d97000113a509':
+    friendly_name: Dressing Room Motion Sensor
+  '0x54ef44100049d8d3':
+    friendly_name: Entrance Door Sensor
+  '0x54ef44100051b193':
+    friendly_name: Laundry Room Motion Sensor
+  '0x286d97000112f11b':
+    friendly_name: Entrance Motion Sensor
+  '0x54ef44100049db37':
+    friendly_name: Living Room Window Sensor
+  '0x54ef4410004b9957':
+    friendly_name: Kyumin Room Wall Switch
+    state_action: true
+  '0x54ef44100051ad64':
+    friendly_name: Utility Room Motion Sensor
+  '0x54ef4410008356b6':
+    friendly_name: Day Night Sensor
+  '0x54ef44100051afee':
+    friendly_name: Kitchen Motion Sensor
+  '0x54ef441000312da6':
+    friendly_name: Bathroom Motion Sensor
+  '0x54ef44100049d8eb':
+    friendly_name: Dressing Room Cabinet Door Sensor
+  '0x04cf8cdf3c8237c7':
+    friendly_name: Donghyeon Room Samsung TV Smart Plug
+    power_calibration: 0
+    power_precision: 3
+    energy_calibration: 0
+    energy_precision: 3
+    voltage_calibration: 0
+    voltage_precision: 3
+    current_calibration: 0
+    current_precision: 3
+    device_temperature_calibration: 0
+    state_action: true
+  '0x54ef4410001e55e1':
+    friendly_name: Bathroom Temperature and Humidity Sensor
+  '0xe0798dfffe57f193':
+    friendly_name: '0xe0798dfffe57f193'
+    temperature_calibration: 0
+    temperature_precision: 3
+    power_calibration: 0
+    power_precision: 3
+    current_calibration: 0
+    voltage_calibration: 0
+    energy_calibration: 0
+    voltage_precision: 3
+    current_precision: 3
+    energy_precision: 3
+    state_action: true
+permit_join: true
+availability: true

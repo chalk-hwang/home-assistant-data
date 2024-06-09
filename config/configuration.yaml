@@ -1,33 +1,16 @@
 homeassistant:
+  packages: !include_dir_named integrations
+
   name: Home
   country: KR
   language: ko
-  latitude: !secret home_latitude
-  longitude: !secret home_longitude
-  elevation: !secret home_elevation
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
+  elevation: !secret homeassistant_elevation
   unit_system: metric
   currency: KRW
   time_zone: Asia/Seoul
-  external_url: !secret external_url
-  internal_url: !secret internal_url
-  packages: !include_dir_named integrations
+  external_url: !secret homeassistant_external_url
+  internal_url: !secret homeassistant_internal_url
   auth_providers:
   - type: homeassistant
-
-# Load frontend themes from the themes folder
-frontend:
-  extra_module_url:
-  - /hacsfiles/button-card/button-card.js
-  - /hacsfiles/light-entity-card/light-entity-card.js
-  - /hacsfiles/lovelace-auto-entities/auto-entities.js
-  - /hacsfiles/lovelace-card-mod/card-mod.js
-  - /hacsfiles/lovelace-layout-card/layout-card.js
-  - /hacsfiles/lovelace-mushroom/mushroom.js
-  - /hacsfiles/lovelace-state-switch/state-switch.js
-  - /hacsfiles/lovelace-xiaomi-vacuum-map-card/xiaomi-vacuum-map-card.js
-  - /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
-  - /hacsfiles/mini-media-player/mini-media-player-bundle.js
-  - /hacsfiles/mushroom-strategy/mushroom-strategy.js
-  - /hacsfiles/my-cards/my-slider.js
-  - /hacsfiles/simple-weather-card/simple-weather-card-bundle.js
-  - /hacsfiles/weather-radar-card/weather-radar-card.js
